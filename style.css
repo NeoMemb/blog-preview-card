@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'FigTreeNormal';
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'FigTreeXBold';
+    src: url('./assets/fonts/static/Figtree-ExtraBold.ttf') format('ttf');
+}
+@font-face {
+    font-family: 'FigTreeMedium';
+    src: url('./assets/fonts/static/Figtree-Medium.ttf') format('ttf');
+}
+@font-face {
+    font-family: 'FigTreeItalic';
+    src: url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('ttf');
+}
+
+:root {
+    --font-normal: 'FigTreeNormal';
+    --font-X-bold: 'FigTreeXBold';
+    --font-medium: 'FigTreeMedium';
+    --font-italic: 'FigTreeItalic';
+    --font-weight-1: 500;
+    --font-weight-2: 800;
+    --para-font-size: 15px;
+    --card-size: 350px;
+    --pad: 1.5rem;
+    --border-rad-1: 1rem;
+    --border-rad-2: .7rem;
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+    --h1-sz: 1.3rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-normal);
+    font-weight: var(--font-weight-1);
+}
+
+body {
+    background-color: var(--yellow);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-block: 10px; */
+}
+
+.card {
+    width: var(--card-size);
+    position: fixed;
+    background-color: var(--white);
+    padding: var(--pad);
+    border-radius: var(--border-rad-1 );
+    border: 2px solid var(--gray-950);
+    box-shadow: 8px 8px 0 var(--gray-950);
+    & .image img {
+        border-radius: var(--border-rad-2);
+    }
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    background-color: var(--yellow);
+    border: none;
+    padding: 5px 18px;
+    margin-block: 10px;
+    border-radius: 3px;
+}
+
+p.details {
+    color: var(--gray-500);
+    font-weight: var(--font-weight-1);
+    font-size: var(--para-font-size);
+    margin-bottom: 30px;
+}
+
+p.date-published {
+    font-size: 13px;
+}
+
+button,
+h1,
+.user-name {
+    font-weight: var(--font-weight-2);
+}
+
+.avatar-user img { 
+    width: 40px;
+    margin-right: 16px;
+}
+
+.avatar-user {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 14px;
+}
+
+h1 { font-size: var(--h1-sz)}
+h1:hover { color: var(--yellow); cursor: pointer;}
+.content > * {
+    margin-top: 15px;
+}
+
+footer.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 1rem;
+}
+
+/* @media screen and (max-width: 375px) {
+    .card {
+        
+    }
+} */
